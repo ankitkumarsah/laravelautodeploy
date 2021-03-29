@@ -25,7 +25,7 @@ jobs:
         password: "Anku@123sah"
         script: |
           'cd /www/wwwroot/computerdost.com/test/'
-          ls -al
+          ./deployer.sh
         # script: 'cd /www/wwwroot/computerdost.com/test/'
 
         # script: 'cd /www/wwwroot/computerdost.com/test/ && ./deployer.sh'
