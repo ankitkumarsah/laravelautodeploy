@@ -24,9 +24,9 @@ jobs:
         host: "208.109.14.72"
         password: "Anku@123sah"
         script: |
-          'cd /www/wwwroot/computerdost.com/test && ./deployer.sh'
+          pwd  
         # script: 'cd /www/wwwroot/computerdost.com/test/'
-
+         # 'cd /www/wwwroot/computerdost.com/test && ./deployer.sh'
         # script: 'cd /www/wwwroot/computerdost.com/test/ && ./deployer.sh'
 # name: remote ssh command
 # on: [push]
