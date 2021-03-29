@@ -26,7 +26,7 @@ jobs:
         script: 'cd /www/wwwroot/computerdost.com/test/ && ./deployer.sh'
 
     - name: Deploy to production
-        script: './deployer.sh'     
+      run: './deployer.sh'     
         # script: 'cd /www/wwwroot/computerdost.com/test/ && ./deployer.sh'
 # name: remote ssh command
 # on: [push]
