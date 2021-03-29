@@ -23,7 +23,7 @@ jobs:
         username: cherrystays
         host: "208.109.14.72"
         password: "Anku@123sah"
-        script: 'cd /www/wwwroot/computerdost.com/laravelautodeploy/ && chmode 777 deployer.sh && ./deployer.sh'
+        script: 'cd /www/wwwroot/computerdost.com/laravelautodeploy/ && chmod 777 deployer.sh && ./deployer.sh'
         # script: |
         #   cd / 
         #   pwd  zz
