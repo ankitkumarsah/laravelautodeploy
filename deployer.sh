@@ -4,6 +4,8 @@ set -e
 echo "Deploying application ..."
 
     # Update codebase
+    git stash
+    
     git reset -- hard
     
     git pull
