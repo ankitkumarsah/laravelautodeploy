@@ -13,7 +13,4 @@ echo "Deploying application ..."
     # Install dependencies based on lock file
     composer install
 
-    # Reload PHP to update opcache
-    echo "" | sudo -S service php7.4-fpm reload
-
 echo "Application deployed!"
