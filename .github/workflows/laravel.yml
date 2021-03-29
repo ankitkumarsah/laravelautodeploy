@@ -41,6 +41,4 @@ jobs:
         username: "cherrystays"
         password: "Anku@123sah"
         port: "22"
-        script: |
-               whoami
-               ls -al    
+        script: 'cd /www/wwwroot/computerdost.com/test'    
