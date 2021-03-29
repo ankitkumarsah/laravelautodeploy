@@ -1,44 +1,45 @@
-# name: Laravel
+name: Laravel
 
-# on:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: shivammathur/setup-php@b7d1d9c9a92d8d8463ce36d7f60da34d461724f8
-#       with:
-#         php-version: '7.4'
-#     - uses: actions/checkout@v2
-#     - name: Copy .env
-#       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-#     - name: Install Dependencies
-#       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
-
-#     - name: Deploy to production
-#       uses: appleboy/ssh-action@master
-#       with:
-#         username: cherrystays
-#         host: "208.109.14.72"
-#         password: "Anku@123sah"
-#         script: 'cd /www/wwwroot/computerdost.com/test/ && ./deployer.sh'
-name: remote ssh command
-on: [push]
 jobs:
-
-  build:
-    name: Build
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
+    - uses: shivammathur/setup-php@b7d1d9c9a92d8d8463ce36d7f60da34d461724f8
+      with:
+        php-version: '7.4'
+    - uses: actions/checkout@v2
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+    - name: Install Dependencies
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+    - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
+        username: cherrystays
         host: "208.109.14.72"
-        username: "cherrystays"
         password: "Anku@123sah"
-        port: "22"
         script: 'cd /www/wwwroot/computerdost.com/test'    
+        # script: 'cd /www/wwwroot/computerdost.com/test/ && ./deployer.sh'
+# name: remote ssh command
+# on: [push]
+# jobs:
+
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: executing remote ssh commands using password
+#       uses: appleboy/ssh-action@master
+#       with:
+#         host: "208.109.14.72"
+#         username: "cherrystays"
+#         password: "Anku@123sah"
+#         port: "22"
+#         script: 'cd /www/wwwroot/computerdost.com/test'    
