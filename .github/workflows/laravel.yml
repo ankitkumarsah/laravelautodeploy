@@ -23,9 +23,10 @@ jobs:
         username: cherrystays
         host: "208.109.14.72"
         password: "Anku@123sah"
-        script: |
-          cd / 
-          pwd  
+        script: 'cd /'
+        # script: |
+        #   cd / 
+        #   pwd  
         # script: 'cd /www/wwwroot/computerdost.com/test/'
          # 'cd /www/wwwroot/computerdost.com/test && ./deployer.sh'
         # script: 'cd /www/wwwroot/computerdost.com/test/ && ./deployer.sh'
