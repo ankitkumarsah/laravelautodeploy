@@ -11,7 +11,7 @@ echo "Deploying application ..."
     git pull
 
     # Install dependencies based on lock file
-    composer install --no-interaction --prefer-dist --optimize-autoloader
+    composer install
 
     # Reload PHP to update opcache
     echo "" | sudo -S service php7.4-fpm reload
