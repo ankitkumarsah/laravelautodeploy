@@ -4,6 +4,8 @@ set -e
 echo "Deploying application ..."
 
     # Update codebase
+    git reset -- hard
+    
     git pull
 
     # Install dependencies based on lock file
