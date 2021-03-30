@@ -26,9 +26,7 @@ jobs:
         script: 'cd /www/wwwroot/computerdost.com/laravelautodeploy/'
 
     - name: Deploy to production
-      uses: appleboy/ssh-action@master
-      with:
-        script: 'chmod 777 deployer.sh && ./deployer.sh'
+      run: 'chmod 777 deployer.sh && ./deployer.sh'
 
 
         # script: |
